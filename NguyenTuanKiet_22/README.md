@@ -1,5 +1,6 @@
-Xây dựng chương trình quản lý danh sách hoá đơn tiền điện của khách hàng. Thông
-tin bao gồm các loại khách hàng:
+#Bài Tập 22
+Xây dựng chương trình quản lý danh sách hoá đơn tiền điện của khách hàng. 
+Thông tin bao gồm các loại khách hàng:
 • Khách hàng Việt Nam: mã khách hàng, họ tên, ngày ra hoá đơn (ngày, tháng,
 năm), đối tượng khách hàng (sinh hoạt, kinh doanh, sản xuất): số lượng (số KW
 tiêu thụ), đơn giá, định mức. Thành tiền được tính như sau:
