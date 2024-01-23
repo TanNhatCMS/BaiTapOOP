@@ -26,5 +26,4 @@ public class NgoaiThanh extends Xe {
         s+= getSoNgay()+"\n";
         return s;
     }
-    d
 }
