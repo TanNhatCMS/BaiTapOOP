@@ -34,6 +34,5 @@ jobs:
       run: |
         gradle clean
         gradle build
-        gradle findJavaFiles
-        gradle build
+        gradle findJavaFiles build
 
