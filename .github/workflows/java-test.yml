@@ -19,8 +19,8 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Compile Java code
-      run: ./gradlew build
-
-    - name: Run Tests
-      run: ./gradlew test
+    - name: Compile Java code and Run Tests
+      run: |
+        ./gradle clean
+        ./gradle build
+        ./gradle test
