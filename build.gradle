@@ -11,22 +11,27 @@ dependencies {
   //  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
-
-sourceSets {
-    main {
-        java {
-            srcDirs = ['src']
-        }
-    }
-}
-
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+def javaFiles = []
+
 task findJavaFiles(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'com.example.FindJavaFiles'
+    args projectDir.toString()
+    doLast {
+        javaFiles = standardOutput.text.trim().split('\n')
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs javaFiles
+        }
+    }
 }
 
 //test {
