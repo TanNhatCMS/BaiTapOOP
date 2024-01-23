@@ -33,6 +33,6 @@ jobs:
     - name: Find Java Files Compile Java code
       run: |
         gradle clean
-        gradle findJavaFiles
+        ./gradlew findJavaFiles
         gradle build
 
