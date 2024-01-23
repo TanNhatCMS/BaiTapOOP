@@ -13,7 +13,7 @@ public class FindJavaFiles {
             File[] files = directory.listFiles((dir, name) -> name.endsWith(".java") && !name.equals("MainMethodTest.java"));
             if (files != null) {
                 for (File file : files) {
-                    System.out.println("Found Java file: " + file.getAbsolutePath());
+                    System.out.println(file.getAbsolutePath());
                 }
             }
 
