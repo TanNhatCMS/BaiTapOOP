@@ -21,8 +21,9 @@ task findJavaFiles(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'com.example.FindJavaFiles'
     args projectDir.toString()
+    standardOutput = new ByteArrayOutputStream()
     doLast {
-        javaFiles = standardOutput.text.trim().split('\n')
+        javaFiles = standardOutput.toString().trim().split('\n')
     }
 }
 
