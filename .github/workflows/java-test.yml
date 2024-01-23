@@ -27,8 +27,7 @@ jobs:
         unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip
         export PATH=$PATH:/opt/gradle/gradle-${GRADLE_VERSION}/bin
 
-    - name: Compile Java code and Run Tests
+    - name: Compile Java code
       run: |
         gradle clean
         gradle build
-        gradle test
