@@ -14,6 +14,7 @@ public class Xe {
      public void setSoXe(String SoXe) {
          this.SoXe = SoXe;
      }
+     d
      public void setDoanhThu(double DoanhThu) {
          this.DoanhThu = DoanhThu;
      }
