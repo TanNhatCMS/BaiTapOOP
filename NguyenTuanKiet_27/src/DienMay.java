@@ -9,4 +9,8 @@ public class DienMay extends HangHoa{
     public void Xuat() {
 
     }
+    @Override
+    public double tinhTienVAT() {
+        return donGia * soLuongTon * 0.1;// VAT 10%
+    }
 }
