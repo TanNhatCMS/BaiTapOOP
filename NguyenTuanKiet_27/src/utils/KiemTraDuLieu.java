@@ -1,6 +1,6 @@
 package utils;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class KiemTraDuLieu {
     public static boolean kiemTraMaHang(String maHang) throws HangHoaException {
@@ -31,7 +31,7 @@ public class KiemTraDuLieu {
         return true;
     }
 
-    public static boolean kiemTraNgayHopLe(Date ngay) throws HangHoaException {
+    public static boolean kiemTraNgayHopLe(LocalDate ngay) throws HangHoaException {
         if (ngay == null) {
             throw new HangHoaException( HangHoaException.LOI_NGAY_HOP_LE);
         }
@@ -52,8 +52,8 @@ public class KiemTraDuLieu {
         return true;
     }
 
-    public static boolean kiemTraThongTinThucPham(Date ngaySanXuat, Date ngayHetHan, String nhaCungCap) throws HangHoaException {
-        if (!ngaySanXuat.before(ngayHetHan) || nhaCungCap.isEmpty()) {
+    public static boolean kiemTraThongTinThucPham(LocalDate ngaySanXuat, LocalDate ngayHetHan, String nhaCungCap) throws HangHoaException {
+        if (!ngaySanXuat.isBefore(ngayHetHan) || nhaCungCap.isEmpty()) {
             throw new HangHoaException(HangHoaException.LOI_THONG_TIN_THUC_PHAM);
         }
         return true;
