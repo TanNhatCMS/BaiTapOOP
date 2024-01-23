@@ -22,7 +22,7 @@ jobs:
       run: |
           chmod +x gradlew
     - name: Initialize Gradle project (if not present)
-      run: ./gradlew init --type java-library
+      run: gradle init --type java-library
 
     - name: Install Gradle
       run: |
