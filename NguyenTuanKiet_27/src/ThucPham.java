@@ -4,18 +4,12 @@ public class ThucPham extends HangHoa{
     Date ngaySanXuat;
     Date ngayHetHan;
     String nhaCungCap;
-    public ThucPham() {
-        super(0.5);
+
+    @Override
+    public double tinhTienVAT() {
+        return  donGia * soLuongTon * 0.05;// VAT 5%
     }
-    public ThucPham(String maHang, String tenHang, int soLuongTon, double donGia) {
-        super(maHang, tenHang, soLuongTon, donGia, 0.5);
-    }
-    public ThucPham(String maHang, String tenHang, int soLuongTon, double donGia, Date ngaySanXuat, Date ngayHetHan, String nhaCungCap) {
-        super(maHang, tenHang, soLuongTon, donGia, 0.5);
-        this.ngaySanXuat = ngaySanXuat;
-        this.ngayHetHan = ngayHetHan;
-        this.nhaCungCap = nhaCungCap;
-    }
+
     @Override
     public void Nhap() {
 
