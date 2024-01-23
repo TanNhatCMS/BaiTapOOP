@@ -17,10 +17,6 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '8.5'
-}
-
 task findJavaFiles(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'com.example.FindJavaFiles'
