@@ -18,6 +18,7 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: '21'
+
     - name: Initialize Gradle project (if not present)
       run: gradle init --type java-library
 
@@ -28,9 +29,14 @@ jobs:
         wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
         unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip
         export PATH=$PATH:/opt/gradle/gradle-${GRADLE_VERSION}/bin
-        
+
     - name: Find Java Files Compile Java code
       run: |
         gradle clean
         gradle findJavaFiles
         gradle build
+        gradle test
+        
+    - name: test Java code
+      run: |
+        gradle test
