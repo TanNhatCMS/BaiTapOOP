@@ -15,7 +15,7 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-def javaFiles = []
+def javaFiles = ["src"]
 
 task findJavaFiles(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
