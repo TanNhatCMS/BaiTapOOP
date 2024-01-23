@@ -1,5 +1,10 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
 
+repositories {
+    jcenter()
+}
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
