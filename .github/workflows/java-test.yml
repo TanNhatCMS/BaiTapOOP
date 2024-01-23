@@ -18,6 +18,8 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: '21'
+    - name: Initialize Gradle project (if not present)
+      run: gradle init --type java-library
 
     - name: Install Gradle
       run: |
