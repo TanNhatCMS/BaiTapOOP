@@ -18,9 +18,7 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: '21'
-    - name: chmod gradlew
-      run: |
-          chmod +x gradlew
+    
     - name: Initialize Gradle project (if not present)
       run: gradle init --type java-library
 
@@ -34,6 +32,6 @@ jobs:
       
     - name: Find Java Files Compile Java code
       run: |
-        ./gradlew clean
-        ./gradlew findJavaFiles build
+        gradle clean
+        gradle findJavaFiles build
 
