@@ -29,14 +29,15 @@ jobs:
         wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
         unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip
         export PATH=$PATH:/opt/gradle/gradle-${GRADLE_VERSION}/bin
-
+      
     - name: Find Java Files Compile Java code
       run: |
         gradle clean
         gradle findJavaFiles
         gradle build
-        gradle test
-        
+
     - name: test Java code
       run: |
-        gradle test
+        ./gradlew clean
+        ./gradlew test
+
