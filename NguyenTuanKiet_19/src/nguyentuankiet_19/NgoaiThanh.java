@@ -11,7 +11,7 @@ public class NgoaiThanh extends Xe {
         this.NoiDen = NoiDen;
     }
     public void setSoNgay(int SoNgay) {
-        this.SoNgay = SoNgay;
+        this.SoNgay = SoNgay;asdsadsdsads
     }
     public String getNoiDen() {
         return NoiDen;
