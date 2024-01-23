@@ -36,8 +36,3 @@ jobs:
         gradle findJavaFiles
         gradle build
 
-    - name: test Java code
-      run: |
-        ./gradlew clean
-        ./gradlew test
-
