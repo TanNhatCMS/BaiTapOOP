@@ -55,14 +55,14 @@ public class Main {
      */
     public static void showMenu() {
         System.out.println("-----------menu------------");
-        System.out.println("1. Add student.");
-        System.out.println("2. Edit student by id.");
-        System.out.println("3. Delete student by id.");
-        System.out.println("4. Sort student by gpa.");
-        System.out.println("5. Sort student by name.");
-        System.out.println("6. Show student.");
-        System.out.println("0. exit.");
+        System.out.println("1. Them sinh vien.");
+        System.out.println("2. Sua sinh vien theo ID.");
+        System.out.println("3. Xoa sinh vien theo ID.");
+        System.out.println("4. Sap sep sinh vien theo diem.");
+        System.out.println("5. Sap xep sinh vien theo ten.");
+        System.out.println("6. Xuat danh sach sinh vien.");
+        System.out.println("0. Thoat.");
         System.out.println("---------------------------");
-        System.out.print("Please choose: ");
+        System.out.print("Vui long chon: ");
     }
 }
