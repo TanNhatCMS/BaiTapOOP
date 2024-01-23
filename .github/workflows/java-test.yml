@@ -13,14 +13,22 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up JDK 11
+    - name: Set up JDK 11 and Gradle
       uses: actions/setup-java@v2
       with:
         distribution: 'adopt'
         java-version: '11'
 
+    - name: Install Gradle
+      run: |
+        sudo apt-get install -y unzip
+        export GRADLE_VERSION=7.0.2
+        wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip
+        unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip
+        export PATH=$PATH:/opt/gradle/gradle-${GRADLE_VERSION}/bin
+
     - name: Compile Java code and Run Tests
       run: |
-        ./gradle clean
-        ./gradle build
-        ./gradle test
+        gradle clean
+        gradle build
+        gradle test
